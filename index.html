@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>WASM Playground</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { greet, get_repo } from "./pkg/wasm_playground.js";
+      init().then(() => {
+
+
+
+
+          get_repo("clojure/clojure").then((data) => {
+              console.log(data);
+          });
+
+
+          greet();
+      });
+    </script>
+  </body>
+</html>
